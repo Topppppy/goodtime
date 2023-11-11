@@ -1,0 +1,110 @@
+<html>
+<head>
+  <style>
+    .keyboard {
+    display: block;
+    position: absolute;
+    bottom: 300px;
+    left: 300;
+   
+}
+
+.keyboard button {
+    width: 40px;
+    height: 30px;
+    /* margin: 5px; */
+ 
+}
+
+  </style>
+</head>
+  <body>
+  
+   
+   
+
+     
+      <input type="text" id="inputField" onclick="showKeyboard()" placeholder="enter a keyword" width="150" height="200">
+      <div id=" viewkeyboard" class="keyboard">
+      <div>
+        <button onclick="input('1')">1</button>
+        <button onclick="Input('2')">2</button>
+        <button onclick="Input('3')">3</button>
+        <button onclick="Input('4')">4</button>
+        <button onclick="Input('5')">5</button>
+        <button onclick="Input('6')">6</button>
+        <button onclick="Input('7')">7</button>
+        <button onclick="Input('8')">8</button>
+        <button onclick="Input('9')">9</button>
+        <button onclick="Input('0')">0</button>
+      </div>
+      <div>
+    <button onclick="Input('Q')">Q</button>
+        <button onclick="Input('W')">W</button>
+        <button onclick="Input('E')">E</button>
+        <button onclick="Input('R')">R</button>
+        <button onclick="Input('T')">T</button>
+        <button onclick="Input('Y')">Y</button>
+        <button onclick="Input('U')">U</button>
+        <button onclick="Input('I')">I</button>
+        <button onclick="Input('O')">O</button>
+        <button onclick="Input('P')">P</button>
+        <button onclick="Input('')">"</button>
+        <button onclick="Input('$')">$</button>
+      </div>
+        <button onclick="Input('A')">A</button>
+        <button onclick="Input('S')">S</button>
+        <button onclick="Input('D')">D</button>
+        <button onclick="Input('F')">F</button>
+        <button onclick="Input('G')">G</button>
+        <button onclick="Input('H')">H</button>
+        <button onclick="Input('J')">J</button>
+        <button onclick="Input('K')">K</button>
+        <button onclick="Input('L')">L</button>
+        <button onclick="Input('?')">?</button>
+        <button onclick="Input('%')">%</button>
+      <div>
+        <button onclick="Input('Z')">Z</button>
+        <button onclick="Input('X')">X</button>
+        <button onclick="Input('C')">C</button>
+        <button onclick="Input('V')">V</button>
+        <button onclick="Input('B')">B</button>
+        <button onclick="Input('N')">N</button>
+        <button onclick="Input('M')">M</button>
+       <button onclick="Input()">Clear</button>
+      </div>
+    </div>
+    <div id="outputText"></div>
+    <script>
+    function showKeyboard() {
+    var keyboard = document.getElementById("viewKeyboard");
+    //  keyboard.style.display = "block";
+ }
+
+ function Input(char) {
+    var inputField = document.getElementById("inputField");
+   inputField.value += char;
+     updateOutputText();
+}
+function Input(num){
+  let inputField = document.getElementById("inputField");
+  inputField.value += num;
+  updateOutputText();
+}
+
+ function clearInput() {
+   var inputField = document.getElementById("inputField");
+    inputField.value = "";    
+ updateOutputText();
+ }
+
+function updateOutputText() {
+    var inputField = document.getElementById("inputField");
+    var outputText = document.getElementById("outputText");
+    outputText.textContent = inputField.value;
+ }
+
+
+    </script>
+</body>
+</html>

@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<style>
+  #displayproduct{
+  background-color: #fff;
+  width: 95%;
+  margin: auto;
+  display: flex;
+  flex-wrap: wrap;
+  border-radius: 10px;
+  margin-top: 20px;
+  }
+
+</style>
+<body>
+<div id="displayproduct">
+
+</div>
+
+  <script>
+ let product = document.getElementById("displayproduct");
+ let products = [];
+ 
+ function displayproduct () {
+  displayproduct.innerHTML = ''
+ fetch('https://dummyjson.com/products/1')
+.then(res => res.json())
+.then(json => console.log(json))
+ }
+ displayproduct();
+
+            
+  </script>
+</body>
+</html>
